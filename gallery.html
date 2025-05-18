@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(135deg, #f23b3b, #292929);
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+      background: linear-gradient(135deg, #f23b3b, #292929);
+    }
+
+    header h1 {
+      font-size: 36px;
+      font-weight: 700;
+      color: rgb(255, 255, 255);
+    }
+
+    .back-button {
+      display: block;
+      margin: 20px auto 0;
+      padding: 10px 20px;
+      background-color: rgb(255, 0, 0);
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #ffb84d;
+    }
+
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery-item {
+      background: #ff0000;
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 0 6px 20px rgba(243, 29, 29, 0.6);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+
+    .gallery-item h3 {
+      font-size: 18px;
+      color: #f9f9f9;
+      text-align: center;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    footer {
+            background-color: #c4302b;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Trending Video Games</h1>
+    <h2>To Watch on Youtube</h2>
+    <button class="back-button" onclick="history.back()">← Go Back</button>
+  </header>
+
+  <div class="gallery-container">
+    <!-- Game Images -->
+    <div class="gallery-item">
+      <img src="Zelda.jpg" alt="Zelda">
+      <h3>The Legend of Zelda</h3>
+    </div>
+    <div class="gallery-item">
+      <img src="minecraft.jpg" alt="Minecraft">
+      <h3>Minecraft</h3>
+    </div>
+    <div class="gallery-item">
+      <img src="fortnite.jpg" alt="Fortnite">
+      <h3>Fortnite</h3>
+    </div>
+    <div class="gallery-item">
+      <img src="mario.jpg" alt="Mario">
+      <h3>Super Mario</h3>
+    </div>
+
+    <!-- Game Videos -->
+    <div class="gallery-item">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/zw47_q9wbBE" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <h3>Zelda Gameplay</h3>
+    </div>
+
+    <div class="gallery-item">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/MmB9b5njVbA" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <h3>Minecraft Adventure</h3>
+    </div>
+
+    <div class="gallery-item">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/2gUtfBmw86Y" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <h3>Fortnite Highlights</h3>
+    </div>
+
+    <div class="gallery-item">
+      <div class="video-container">
+        <iframe src="https://www.youtube-nocookie.com/embed/iz5c1XRT6_k?si=lkJDrNZ3WMO1Cl96" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <h3>Mario World Tour</h3>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+    <footer>
+        <p>© 2025 YouTube Trends Blog - All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
